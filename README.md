@@ -1,26 +1,26 @@
 # Decision-Tree
 
-## Binder Badge to start the Binder environment:
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GharbiRaouf/Decision_Tree_my_logger-my_timer/master)
+## Binder Badge, um die Binder-Umgebung zu starten:
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/AdilSh99/Decision_Tree_my_logger-my_timer/HEAD)
 
-## How to perform the exercise?
-Click on the Launch Binder button, then a Binder window will open. A docker container with all necessary images will be created automatically. After a successful creation, a Jupyter window will be opened. Open Decision_Trees_Projekt.ipynb and then click on Run All at the top of Cell.
+## Wie wird die Übung durchgeführt?
+Klicken Sie auf die Schaltfläche "Launch Binder", dann wird ein Binder-Fenster geöffnet. Es wird automatisch ein Docker-Container mit allen notwendigen Images erstellt. Nach erfolgreicher Erstellung wird ein Jupyter-Fenster geöffnet. Öffnen Sie Decision_Trees_Projekt.ipynb und klicken Sie dann oben in Cell auf Run All.
 
-## Expected results ?
-For this project we will use publicly available data from LendingClub.com. We will use data from 2007 to 2010 before the company went public. Using the data, we will try to predict whether a borrower has repaid the money or not. We have attached the data as CSV in the share price documentation.
+## Erwartete Ergebnisse ?
+Für dieses Projekt werden wir öffentlich verfügbare Daten von LendingClub.com verwenden. Wir werden Daten von 2007 bis 2010 verwenden, bevor das Unternehmen an die Börse ging. Anhand der Daten werden wir versuchen, vorherzusagen, ob ein Kreditnehmer das Geld zurückgezahlt hat oder nicht. Wir haben die Daten als CSV in der Kursdokumentation angehängt.
 
-1. Read data.
-2. Explorative data analysis of data.
-3. Generate some visualizations for a general overview.
-4. Prepare data for a random forest classification model.
-5. Training a decision tree model
-6. Evaluation of data
+1. Daten lesen.
+2. Explorative Datenanalyse von Daten.
+3. Erzeugen einiger Visualisierungen für einen allgemeinen Überblick.
+4. Vorbereiten von Daten für ein Random-Forest-Klassifikationsmodell.
+5. Trainieren eines Entscheidungsbaummodells
+6. Auswertung der Daten
 
 ## Timer & logger
 
-In this section we will be documenting how we can log and get the execution time for certain functions.
+In diesem Abschnitt werden wir dokumentieren, wie wir die Ausführungszeit für bestimmte Funktionen protokollieren und erhalten können.
 
-As start we need to setup the necessary wrappers timer and logger as follow
+Als Start müssen wir die notwendigen Wrapper Timer und Logger wie folgt einrichten
 
 ```python
 # Decorators
@@ -53,7 +53,7 @@ def my_timer(orig_func):
     return wrapper
 ```
 
-Next thing is to use these wrappers as follow:
+Als Nächstes müssen Sie diese Umhüllungen wie folgt verwenden:
 
 ```python
 @my_logger 
@@ -63,7 +63,7 @@ def dtreeFit ():
 dtreeFit()
 ```
 
-And as you can see these are the output after execution:
+Und wie Sie sehen können, sind dies die Ausgaben nach der Ausführung:
 - Logger
 ![Screenshot](logger.PNG)
 
@@ -72,9 +72,8 @@ And as you can see these are the output after execution:
 
 
 ## Unit Tests
-
-The first unit test case is reading its test data set from test_data.txt file.
-The user is now able to change the data set for this test through one of the following methods:
+Der erste Unit-Testfall liest seinen Testdatensatz aus der Datei test_data.txt.
+Der Benutzer kann nun den Datensatz für diesen Test über eine der folgenden Methoden ändern:
 ```
 Override the data set with new one in test_data.txt
 Run unit tests
